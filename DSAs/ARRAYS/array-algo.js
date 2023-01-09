@@ -33,4 +33,15 @@ const findSumBetter = (arr, weight) => {
 	return -1;
 };
 
-console.log(findSumBetter([1, 2, 3, 4, 5], 9));
+// Median of array
+function medianOfArray(arr) {
+	let len = arr.length;
+
+	if (len % 2 == 1) {
+		return arr[Math.floor(len / 2)];
+	} else {
+		return (arr[len / 2] + arr[len / 2 - 1]) / 2;
+	}
+}
+
+// Median of two
