@@ -1,2 +1,20 @@
 // Multi Dimensional arrays
-const arr = [];
+var twod = [];
+
+var rows = 5;
+for (var i = 0; i < rows; ++i) {
+	twod[i] = [];
+}
+
+// Better method to create a jagged array
+Array.matrix = function (numrows, numcols, initial) {
+	var arr = [];
+	for (var i = 0; i < numrows; ++i) {
+		var columns = [];
+		for (var j = 0; j < numcols; ++j) {
+			columns[j] = initial;
+		}
+		arr[i] = columns;
+	}
+	return arr;
+};
