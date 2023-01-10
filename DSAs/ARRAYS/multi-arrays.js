@@ -7,14 +7,20 @@ for (var i = 0; i < rows; ++i) {
 }
 
 // Better method to create a jagged array
-Array.matrix = function (numrows, numcols, initial) {
-	var arr = [];
-	for (var i = 0; i < numrows; ++i) {
-		var columns = [];
-		for (var j = 0; j < numcols; ++j) {
-			columns[j] = initial;
-		}
-		arr[i] = columns;
+const Matrix = (rows, columns) => {
+	let jaggedarray = new Array(rows);
+	for (let i = 0; i < columns; i += 1) {
+		jaggedarray[i] = new Array(rows);
 	}
-	return arr;
+	return jaggedarray;
 };
+
+// Matrix(3,3)  returns an array with 3 arrays each having a length of 3
+
+const matrix3by3 = [
+	[1, 2, 3],
+	[4, 5, 6],
+	[7, 8, 9],
+];
+
+matrix3by3[0][2]; // prints 3
