@@ -16,14 +16,15 @@ const findSum = (arr, target) => {
 
 // Using HashTable
 
-const findSumBetter = (arr, weight) => {
+function findSumBetter(arr, weight) {
 	var hashtable = {};
 
-	for (var i = 0; i < arr.length; i++) {
+	for (var i = 0, arrLength = arr.length; i < arrLength; i++) {
 		var currentElement = arr[i],
 			difference = weight - currentElement;
-		//		check the right one already exists
-		if (hashtable[currentElement] != undefined) {
+
+		// check the right one already exists
+		if (hashtable[difference]) {
 			return [i, hashtable[weight - currentElement]];
 		} else {
 			// store index
@@ -31,7 +32,7 @@ const findSumBetter = (arr, weight) => {
 		}
 	}
 	return -1;
-};
+}
 
 // Median of array
 function medianOfArray(arr) {
