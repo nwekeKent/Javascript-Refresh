@@ -16,10 +16,11 @@ function average() {
 		return a + b;
 	}, 0);
 
-	return total / this.dataStore.length;
+	return Math.round(total / this.dataStore.length);
 }
 
 const kent = new studentGrades();
 kent.add(50);
 kent.add(50);
+kent.add(40);
 console.log(kent.average());

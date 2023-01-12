@@ -37,7 +37,7 @@ function findSumBetter(arr, weight) {
 // Median of array
 function medianOfArray(arr) {
 	let len = arr.length;
-
+	// if odd
 	if (len % 2 == 1) {
 		return arr[Math.floor(len / 2)];
 	} else {
