@@ -1,10 +1,12 @@
 // Create a grades object that stores a set of student grades in an object. Provide a function for adding a grade and
 // a function for displaying the student’s grade average.
 
-function studentGrades() {
-	this.dataStore = [];
-	this.add = add;
-	this.average = average;
+class StudentGrades {
+	constructor() {
+		this.dataStore = [];
+		this.add = add;
+		this.average = average;
+	}
 }
 
 function add(grade) {
@@ -19,8 +21,9 @@ function average() {
 	return Math.round(total / this.dataStore.length);
 }
 
-const kent = new studentGrades();
-kent.add(50);
-kent.add(50);
-kent.add(40);
-console.log(kent.average());
+// 2. Store a set of words in an array and display the contents both forward and backward.
+
+const word = "This is the way to go";
+const wordArr = word.split(" ");
+wordArr.reverse();
+console.log(wordArr);
