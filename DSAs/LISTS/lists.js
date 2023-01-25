@@ -19,7 +19,7 @@ function List() {
 	// this.moveTo = moveTo;
 	// this.getElement = getElement;
 	// this.length = length;
-	// this.contains = contains;
+	this.contains = contains;
 }
 
 // * Adding element to a list
@@ -89,4 +89,15 @@ function clear() {
 	delete this.dataStore;
 	this.dataStore = [];
 	this.listSize = this.pos = 0;
+}
+
+// * Checking if an element is present in a list
+
+function contains(element) {
+	for (var i = 0; i < this.dataStore.length; ++i) {
+		if (this.dataStore[i] == element) {
+			return true;
+		}
+	}
+	return false;
 }
