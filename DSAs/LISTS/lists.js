@@ -101,3 +101,5 @@ function contains(element) {
 	}
 	return false;
 }
+
+// * Traversing a list:
