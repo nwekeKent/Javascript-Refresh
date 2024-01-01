@@ -2,32 +2,26 @@
 
 // 1 The sum of Range
 
-function range(start, end, step) {
-	let rangeArray = [];
+// Range function that generates an array of numbers from start to end (inclusive) with an optional step
+function range(start, end, step = 1) {
+	const result = [];
 
-	if (step) {
+	if (step > 0) {
 		for (let i = start; i <= end; i += step) {
-			rangeArray.push(i);
+			result.push(i);
 		}
 	} else {
-		for (let i = start; i <= end; i++) {
-			rangeArray.push(i);
+		for (let i = start; i >= end; i += step) {
+			result.push(i);
 		}
 	}
 
-	return rangeArray;
+	return result;
 }
 
-console.log(range(1, 10, -1));
-
-function sum(arr) {
-	let sum = 0;
-
-	for (element of arr) {
-		sum += element;
-	}
-
-	return sum;
+// Sum function that calculates the sum of an array of numbers
+function sum(numbers) {
+	return numbers.reduce((acc, val) => acc + val, 0);
 }
 
-console.log(sum(range(1, 10)));
+console.log(range(5, 2, -1));
