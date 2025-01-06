@@ -46,3 +46,17 @@ Elf.prototype.attack = function () {
 
 const paul = new Elf("Paul", "sword");
 paul.attack();
+
+
+// Class Keyword.
+
+class Elf {
+	constructor (name, weapon) {
+		this.name = name,
+		this.weapon = weapon
+	}
+
+	attack() {
+		return `attack with ${this.weapon}`
+}
+}
